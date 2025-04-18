@@ -93,12 +93,15 @@ Edite seu arquivo application.properties com as credenciais do seu banco:
 ```bash
 properties
 
-spring.jpa.hibernate.ddl-auto=update
-spring.datasource.url=jdbc:mysql://localhost:3306/livros
-spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.url=jdbc:mysql://localhost:3306/nomeDoBancoDeDados
+spring.datasource.username=seuUser
+spring.datasource.password=suaPassword
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
 
 ```
 ⚠️ Certifique-se de que o banco livros já foi criado no MySQL antes de rodar a aplicação.
