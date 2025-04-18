@@ -29,7 +29,7 @@ public class LivroService {
 
     public String delete(long id) {
         this.livroRepository.deleteById(id);
-        return "Carro deletado com sucesso!";
+        return "Livro deletado com sucesso!";
     }
 
     public List<Livro> findAll() {
